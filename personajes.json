@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ac-001",
+    "nombre": "Canela",
+    "rol": "Especial",
+    "origen": "Perro",
+    "imagen": "https://raw.githubusercontent.com/alex1089/Animal-Crossing-NH-API/master/images/villagers/1",
+    "descripcion": "La atenta y amable secretaria del ayuntamiento lista para ayudarte.",
+    "fechaCreacion": "2026-10-14T18:30:00Z"
+  },
+  {
+    "id": "ac-002",
+    "nombre": "Raymond",
+    "rol": "Esnob",
+    "origen": "Gato",
+    "imagen": "https://raw.githubusercontent.com/alex1089/Animal-Crossing-NH-API/master/images/villagers/64",
+    "descripcion": "Un gato con heterocromía amante de la elegancia.",
+    "fechaCreacion": "2026-10-15T10:00:00Z"
+  },
+  {
+    "id": "ac-003",
+    "nombre": "Fustino",
+    "rol": "Atlántico / Atleta",
+    "origen": "Águila",
+    "imagen": "https://raw.githubusercontent.com/alex1089/Animal-Crossing-NH-API/master/images/villagers/20",
+    "descripcion": "Obsesionado con el ejercicio y la fuerza muscular.",
+    "fechaCreacion": "2026-10-16T12:00:00Z"
+  },
+  {
+    "id": "ac-004",
+    "nombre": "Lili",
+    "rol": "Dulce",
+    "origen": "Lobo",
+    "imagen": "https://raw.githubusercontent.com/alex1089/Animal-Crossing-NH-API/master/images/villagers/388",
+    "descripcion": "Tranquila, educada y apasionada por los libros y las flores.",
+    "fechaCreacion": "2026-10-17T09:15:00Z"
+  },
+  {
+    "id": "ac-005",
+    "nombre": "Tom Nook",
+    "rol": "Especial",
+    "origen": "Tanuki",
+    "imagen": "https://raw.githubusercontent.com/alex1089/Animal-Crossing-NH-API/master/images/villagers/2",
+    "descripcion": "El fundador de Nook Inc. y gestor principal del Plan de Asentamiento.",
+    "fechaCreacion": "2026-10-17T14:20:00Z"
+  },
+  {
+    "id": "ac-006",
+    "nombre": "Parches",
+    "rol": "Perezoso",
+    "origen": "Oso Peluche",
+    "imagen": "https://raw.githubusercontent.com/alex1089/Animal-Crossing-NH-API/master/images/villagers/110",
+    "descripcion": "Le encantan los aperitivos, las siestas y hablar con los bichos de su casa.",
+    "fechaCreacion": "2026-10-17T15:00:00Z"
+  }
+]

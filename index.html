@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección de Aldeanos - Animal Crossing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar is-primary mb-5" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-4 has-text-weight-bold" href="#">
+          <i class="fa-solid fa-leaf mr-2"></i> Animal Crossing Villagers
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container px-4 mb-6">
+    <div class="level mb-5">
+      <div class="level-left">
+        <div class="level-item">
+          <div class="field has-addons">
+            <div class="control has-icons-left">
+              <input id="search-input" class="input" type="text" placeholder="Buscar por nombre o personalidad...">
+              <span class="icon is-small is-left">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+            <div class="control">
+              <button id="clear-search-btn" class="button is-light" style="display: none;">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="level-item">
+          <p id="search-count" class="has-text-grey is-size-7"></p>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <button id="open-add-modal-btn" class="button is-success">
+            <span class="icon"><i class="fas fa-plus"></i></span>
+            <span>Agregar Aldeano</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  
+    <div id="empty-state" class="has-text-centered my-6" style="display: none;">
+      <span class="icon is-large has-text-primary mb-3">
+        <i class="fa-solid fa-face-frown fa-3x"></i>
+      </span>
+      <h3 id="empty-state-title" class="title is-4">No hay aldeanos registrados</h3>
+      <p id="empty-state-subtitle" class="subtitle is-6">¡Agrega tu primer aldeano a la isla!</p>
+      <button id="reset-search-btn" class="button is-primary is-outlined mt-2" style="display: none;">Limpiar Búsqueda</button>
+    </div>
+
+
+    <div id="villagers-grid" class="columns is-multiline"></div>
+  </main>
+
+  
+  <div id="villager-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p id="modal-title" class="modal-card-title">Agregar Aldeano</p>
+        <button class="delete close-modal" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <form id="villager-form">
+          <input type="hidden" id="villager-id">
+
+          <div class="field">
+            <label class="label">Nombre *</label>
+            <div class="control">
+              <input id="input-nombre" class="input" type="text" placeholder="Ej. Canela, Tom Nook, Raymond">
+            </div>
+            <p id="error-nombre" class="help is-danger" style="display: none;">El nombre es obligatorio.</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Personalidad (Rol) *</label>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select id="input-rol">
+                  <option value="">Selecciona una personalidad</option>
+                  <option value="Dulce">Dulce</option>
+                  <option value="Esnob">Esnob</option>
+                  <option value="Alegre">Alegre</option>
+                  <option value="Atlántico / Atleta">Atlántico / Atleta</option>
+                  <option value="Gruñón">Gruñón</option>
+                  <option value="Perezoso">Perezoso</option>
+                  <option value="Presumida">Presumida</option>
+                  <option value="Especial">Especial (NPC)</option>
+                </select>
+              </div>
+            </div>
+            <p id="error-rol" class="help is-danger" style="display: none;">Selecciona un rol o personalidad.</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Especie / Origen</label>
+            <div class="control">
+              <input id="input-origen" class="input" type="text" placeholder="Ej. Gato, Perro, Oso, Isla Inicial">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">URL de la Imagen</label>
+            <div class="control">
+              <input id="input-imagen" class="input" type="url" placeholder="https://ejemplo.com/imagen.png">
+            </div>
+            <p class="help">Si no proporcionas URL o está rota, se mostrarán las iniciales del aldeano.</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Frase o Descripción</label>
+            <div class="control">
+              <textarea id="input-descripcion" class="textarea" rows="2" placeholder="Muletilla o descripción corta del personaje..."></textarea>
+            </div>
+          </div>
+        </form>
+      </section>
+      <footer class="modal-card-foot">
+        <button id="save-btn" class="button is-success">Guardar</button>
+        <button class="button close-modal">Cancelar</button>
+      </footer>
+    </div>
+  </div>
+
+ 
+  <div id="detail-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p id="detail-title" class="modal-card-title">Detalle del Personaje</p>
+        <button class="delete close-detail-modal" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-128x128" id="detail-image-container"></figure>
+          </div>
+          <div class="media-content">
+            <p id="detail-name" class="title is-3 mb-1"></p>
+            <p id="detail-rol" class="subtitle is-5 has-text-primary mb-3"></p>
+            <p id="detail-origen" class="is-size-6 mb-2"></p>
+            <p id="detail-date" class="is-size-7 has-text-grey mb-3"></p>
+            <hr class="my-2">
+            <p id="detail-description" class="content"></p>
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-primary close-detail-modal">Volver a la lista</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
