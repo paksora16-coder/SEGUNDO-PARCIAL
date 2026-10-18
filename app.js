@@ -24,8 +24,8 @@ const defaultVillagers = [
     nombre: "Canela",
     rol: "Especial",
     origen: "Perro",
-    imagen: "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d4/Canela_NH.png",
-    descripcion: "La atenta y amable secretaria del ayuntamiento lista para ayudarte con los trámites de la isla.",
+    imagen: "assets/canela.png",
+    descripcion: "La atenta y amable secretaria del ayuntamiento, lista para ayudarte con todos los trámites y la vida en la isla.",
     fechaCreacion: new Date().toISOString()
   },
   {
@@ -33,7 +33,7 @@ const defaultVillagers = [
     nombre: "Tom Nook",
     rol: "Especial",
     origen: "Tanuki",
-    imagen: "https://vignette.wikia.nocookie.net/animalcrossing/images/5/52/Tom_Nook_NH.png",
+    imagen: "assets/tom nook.png",
     descripcion: "El visionario presidente de Nook Inc. y gestor del Plan de Asentamiento en Islas Desiertas.",
     fechaCreacion: new Date().toISOString()
   },
@@ -42,17 +42,17 @@ const defaultVillagers = [
     nombre: "Raymond",
     rol: "Esnob",
     origen: "Gato",
-    imagen: "https://vignette.wikia.nocookie.net/animalcrossing/images/6/64/Milio_NH.png",
-    descripcion: "Un popular gato con heterocromía amante de los trajes elegantes y la organización impecable.",
+    imagen: "assets/raymond.jpg",
+    descripcion: "Un popular gato con heterocromía amante de los trajes elegantes, el buen café y la organización impecable.",
     fechaCreacion: new Date().toISOString()
   },
   {
     id: "ac-004",
     nombre: "Lili",
     rol: "Dulce",
-    origen: "Lobo",
-    imagen: "https://vignette.wikia.nocookie.net/animalcrossing/images/7/77/Lili_NH.png",
-    descripcion: "Una lobita afable y educada a la que le apasiona la lectura, la jardinería y el té.",
+    origen: "Rana",
+    imagen: "assets/lily.jpg",
+    descripcion: "Una ranita afable y educada a la que le apasiona la lectura, la jardinería y disfrutar de una taza de té.",
     fechaCreacion: new Date().toISOString()
   },
   {
@@ -60,21 +60,20 @@ const defaultVillagers = [
     nombre: "Parches",
     rol: "Perezoso",
     origen: "Oso Peluche",
-    imagen: "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d2/Parches_NH.png",
-    descripcion: "Un tierno osito de colores a quien le encantan los dulces, las siestas y hablar con los insectos.",
+    imagen: "assets/parches.jpg",
+    descripcion: "Un tierno osito de colores a quien le encantan los dulces, las siestas y hablar con los insectos de su casa.",
     fechaCreacion: new Date().toISOString()
   },
   {
     id: "ac-006",
     nombre: "Fustino",
     rol: "Atlántico / Atleta",
-    origen: "Águila",
-    imagen: "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a2/Fustino_NH.png",
-    descripcion: "Un águila entusiasta del acondicionamiento físico, las rutinas de pesas y la motivación.",
+    origen: "Paloma",
+    imagen: "assets/fustino.jpg",
+    descripcion: "Un aficionado al café refinado y dueño de 'El Alpiste', apasionado por la buena atención y las conversaciones tranquilas.",
     fechaCreacion: new Date().toISOString()
   },
-];
-
+]
 
 document.addEventListener('DOMContentLoaded', () => {
   cargarPersonajes();
