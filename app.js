@@ -24,7 +24,7 @@ const defaultVillagers = [
     nombre: "Canela",
     rol: "Especial",
     origen: "Perro",
-    imagen: "assets/canela.png",
+    imagen: "assets/canelita.png",
     descripcion: "La atenta y amable secretaria del ayuntamiento, lista para ayudarte con todos los trámites y la vida en la isla.",
     fechaCreacion: new Date().toISOString()
   },
