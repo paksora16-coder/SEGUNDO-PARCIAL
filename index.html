@@ -135,7 +135,6 @@
     </div>
   </div>
 
- 
   <div id="detail-modal" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
@@ -144,17 +143,19 @@
         <button class="delete close-detail-modal" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <div class="media">
+        <div class="media align-items-center">
           <div class="media-left">
-            <figure class="image is-128x128" id="detail-image-container"></figure>
+            <figure class="image is-128x128" id="detail-image-container" style="display: flex; align-items: center; justify-content: center;"></figure>
           </div>
           <div class="media-content">
-            <p id="detail-name" class="title is-3 mb-1"></p>
-            <p id="detail-rol" class="subtitle is-5 has-text-primary mb-3"></p>
-            <p id="detail-origen" class="is-size-6 mb-2"></p>
+            <h3 id="detail-name" class="title is-4 mb-2"></h3>
+            <div>
+              <span id="detail-rol" class="tag is-primary is-medium mb-3"></span>
+            </div>
+            <p id="detail-origen" class="is-size-6 mb-1 has-text-weight-semibold"></p>
             <p id="detail-date" class="is-size-7 has-text-grey mb-3"></p>
-            <hr class="my-2">
-            <p id="detail-description" class="content"></p>
+            <hr class="my-3">
+            <p id="detail-description" class="content is-size-6"></p>
           </div>
         </div>
       </section>
