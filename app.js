@@ -57,11 +57,11 @@ const defaultVillagers = [
   },
   {
     id: "ac-005",
-    nombre: "Parches",
+    nombre: "Gandulio",
     rol: "Perezoso",
-    origen: "Oso Peluche",
-    imagen: "assets/parches.jpg",
-    descripcion: "Un tierno osito de colores a quien le encantan los dulces, las siestas y hablar con los insectos de su casa.",
+    origen: "Perezoso",
+    imagen: "assets/gandulio.jpg",
+    descripcion: "Un tierno perezoso que disfruta de las siestas y el confort, además de su amor por las plantas.",
     fechaCreacion: new Date().toISOString()
   },
   {
