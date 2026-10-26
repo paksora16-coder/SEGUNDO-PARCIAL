@@ -123,7 +123,6 @@ function renderizarGrid(lista) {
 
   lista.forEach(p => {
     const col = document.createElement('div');
-    // Agregamos 'is-flex' para que todas las columnas de la fila compartan la misma altura
     col.className = 'column is-12-mobile is-6-tablet is-4-desktop is-flex';
 
     const card = document.createElement('div');
