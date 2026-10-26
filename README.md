@@ -10,7 +10,7 @@ Aplicación Web de Una Sola Página (SPA) desarrollada para administrar una cole
 * **Materia:** LAD319 - Desarrollo de Aplicaciones Web  
 * **Carrera:** Ingeniería en Animación Digital  
 * **Institución:** Universidad La Salle Bajío (Campus Campestre)  
-* **URL de la Aplicación (GitHub Pages):** 
+* **URL de la Aplicación (GitHub Pages):** https://paksora16-coder.github.io/SEGUNDO-PARCIAL/
 ---
 
 ## 📖 Descripción del Proyecto
@@ -52,4 +52,4 @@ Toda la información gestionada persiste en el navegador mediante el uso de **`l
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone 
+   git clone https://paksora16-coder.github.io/SEGUNDO-PARCIAL/
